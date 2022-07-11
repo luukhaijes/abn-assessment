@@ -7,6 +7,7 @@
 </template>
 
 <script lang="ts" setup>
+import type { ComponentPublicInstance } from "vue"
 import { onMounted, ref } from "vue";
 import IconStar from "@/components/icons/IconStar.vue";
 const STAR_AMOUNT = [0, 1, 2, 3, 4];
@@ -25,11 +26,11 @@ const stars = (): number[] => {
   }
 };
 
-const divs = ref([]);
+const divs = ref<ComponentPublicInstance<HTMLElement>[] | any | null>(null);
 
 onMounted(() => {
   stars().forEach((star: number) => {
-    if (divs.value[star]) {
+    if (divs.value && divs.value[star]) {
       divs.value[star].$el.style.fill = "#f9d949";
     }
   });
