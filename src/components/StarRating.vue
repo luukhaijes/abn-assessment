@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ComponentPublicInstance } from "vue"
+import type { ComponentPublicInstance } from "vue";
 import { onMounted, ref } from "vue";
 import IconStar from "@/components/icons/IconStar.vue";
 const STAR_AMOUNT = [0, 1, 2, 3, 4];
@@ -26,7 +26,7 @@ const stars = (): number[] => {
   }
 };
 
-const divs = ref<ComponentPublicInstance<HTMLElement>[] | any | null>(null);
+const divs = ref<Array<ComponentPublicInstance<HTMLElement>> | Array<any>>([]);
 
 onMounted(() => {
   stars().forEach((star: number) => {
