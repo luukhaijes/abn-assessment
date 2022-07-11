@@ -1,7 +1,6 @@
 <template>
   <template v-if="cast?.length">
-    <SectionTitle class="mb-6"> Starring</SectionTitle>
-    <div class="flex flex-row flex-wrap justify-around md:justify-between md:flex-nowrap">
+    <div class="flex flex-row flex-wrap justify-around md:flex-nowrap md:justify-between">
       <div v-for="cast in mainCast" class="w-32 text-center" :key="cast.person.id">
         <img :src="cast.person.image.medium" :alt="'Cast picture of ' + cast.person.name"
              class="mb-2 aspect-square w-full rounded-full object-cover" />

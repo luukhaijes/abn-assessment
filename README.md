@@ -5,10 +5,10 @@ Framework: Vue 3, as it was stated in the email and ABN works with it
 ### UI
 - [x] Show basic genres (eg.: Drama)
 - [x] Show based on rating
-- [ ] Eye catching UI
+- [x] Eye catching UI
 - [x] Add search
-- [ ] Add detail page for show
-- [ ] Responsive
+- [x] Add detail page for show
+- [x] Responsive
 - [ ] move close button for search
 
 ### Technical

@@ -11,13 +11,16 @@ import { computed } from "vue";
 import { stripHTML } from "@/utils/strip-html";
 
 const props = defineProps<{
-  summary: string;
+  summary: string | null;
   cutOfLength?: number;
 }>();
 
 const changedSummary = computed(() => {
-  const strippedHTML = stripHTML(props.summary);
-  const cutLength = props.cutOfLength;
-  return cutLength && strippedHTML.length >= cutLength ? strippedHTML.slice(0, cutLength) + "..." : strippedHTML;
+  const summary = props.summary;
+  if (summary) {
+    const strippedHTML = stripHTML(summary);
+    const cutLength = props.cutOfLength;
+    return cutLength && strippedHTML.length >= cutLength ? strippedHTML.slice(0, cutLength) + "..." : strippedHTML;
+  }
 });
 </script>

@@ -6,11 +6,19 @@
         <img class="w-full rounded-md" :alt="'Poster of ' + showDetail.name" :src="showDetail.image.medium" />
       </div>
       <div class="mr-16 w-full grow md:w-4/6">
-        <div class="mb-4">
-          <SectionTitle class="mb-6 w-auto"> Synopsis </SectionTitle>
-          <MovieSummary :summary="showDetail.summary" />
-        </div>
-        <ShowCast :cast="showDetail._embedded.cast" />
+        <ShowSummary class="mb-6">
+          Synopsis
+          <template #content>
+            <SummaryItem :summary="showDetail.summary" />
+          </template>
+        </ShowSummary>
+
+        <ShowSummary>
+          Starring
+          <template #content>
+            <ShowCast :cast="showDetail._embedded.cast" />
+          </template>
+        </ShowSummary>
       </div>
       <div class="w-full md:w-2/6">
         <ShowPhotos :images="showDetail._embedded.images" />
@@ -20,13 +28,13 @@
 </template>
 
 <script lang="ts" setup>
-import { useGetShow } from "@/composables/use-get-show";
 import { useRoute } from "vue-router";
-import SectionTitle from "@/components/SectionTitle.vue";
-import MovieSummary from "@/components/MovieSummary.vue";
+import { useGetShow } from "@/composables/use-get-show";
+import SummaryItem from "@/components/SummaryItem.vue";
 import Billboard from "@/components/MovieBillboard.vue";
 import ShowCast from "@/components/ShowCast.vue";
 import ShowPhotos from "@/components/ShowPhotos.vue";
+import ShowSummary from "@/components/ShowSummary.vue";
 
 const { params } = useRoute();
 
