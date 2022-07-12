@@ -1,5 +1,5 @@
 <template>
-  <MovieBillboard v-if="data" class="mb-6 h-[550px]" :show="data">
+  <MovieBillboard v-if="data" class="mb-6" enlarge :show="data">
     <router-link :to="'/show/' + data.id">
       <button class="button">View more</button>
     </router-link>

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row">
     <div v-for="star in STAR_AMOUNT" :key="star">
-      <IconStar fill="rgb(210, 213, 218)" class="w-6" :ref="(el) => (divs[star] = el)" />
+      <IconStar fill="rgb(210, 213, 218)" class="w-6" :ref="(el) => addStarEls(el)" />
     </div>
   </div>
 </template>
@@ -27,6 +27,10 @@ const stars = (): number[] => {
 };
 
 const divs = ref<Array<ComponentPublicInstance<HTMLElement>>>([]);
+
+const addStarEls = (el: unknown) => {
+  divs.value.push(el as ComponentPublicInstance<HTMLElement>);
+};
 
 onMounted(() => {
   stars().forEach((star: number) => {

@@ -36,7 +36,6 @@ defineProps<{
   @apply flex
   h-full
   w-full
-  w-full
   items-end
   justify-center
   rounded-md

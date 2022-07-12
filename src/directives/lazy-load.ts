@@ -2,7 +2,7 @@ import type { Directive, DirectiveBinding } from "vue";
 
 function loadImage(el: HTMLImageElement | HTMLElement, providedSource: string) {
   el.addEventListener(
-    "load",
+    "loaded",
     () => {
       setTimeout(() => el.classList.add("loaded"), 100);
     },

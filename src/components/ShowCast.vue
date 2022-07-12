@@ -21,5 +21,17 @@ const props = defineProps<{
   cast: Array<CastItem>;
 }>();
 
-const mainCast = computed(() => props.cast.slice(0, 5));
+const removeDuplicateCastMembers = (arr: CastItem[]): Array<CastItem> => {
+  const names = new Set();
+
+  return arr.filter((castItem) => {
+    const isDuplicate = names.has(castItem.person.name.toLowerCase());
+
+    names.add(castItem.person.name.toLowerCase());
+
+    return !isDuplicate;
+  });
+};
+
+const mainCast = computed(() => removeDuplicateCastMembers(props.cast).slice(0, 5));
 </script>

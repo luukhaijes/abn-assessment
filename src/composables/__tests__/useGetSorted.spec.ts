@@ -38,12 +38,14 @@ const expected = {
 };
 
 describe("useGetSorted", () => {
-  it("Should return popular sorted list based on rating", () => {
-    const { sorted } = useShowListSorted(payload);
+  const { sorted } = useShowListSorted(payload);
 
+  it("Should return popular sorted list based on rating", () => {
     expect(sorted.Popular).toBeDefined();
     expect(sorted.Popular).to.deep.equal(expected.sorted.Popular);
   });
 
-  // it("Should return all genres with popular", () => {});
+  it("Should return all genres with popular", () => {
+    expect(Object.keys(sorted).length).to.equal(genres.length);
+  });
 });

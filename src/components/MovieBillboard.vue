@@ -1,5 +1,10 @@
 <template>
-  <div v-if="show" class="flex h-96 w-full overflow-hidden bg-cover bg-center" ref="billBoard">
+  <div
+    v-if="show"
+    class="flex w-full overflow-hidden bg-cover bg-center"
+    :class="{ 'h-96': !enlarge, 'h-[550px]': enlarge }"
+    ref="billBoard"
+  >
     <div class="flex w-full min-w-[24rem] bg-black bg-opacity-10 p-3 pb-6 backdrop-blur md:w-auto md:p-12">
       <div class="mt-auto">
         <h2 class="mb-1 text-4xl font-bold text-white">{{ show.name }}</h2>
@@ -24,6 +29,7 @@ import { getRandom } from "@/utils/get-random";
 
 const props = defineProps<{
   show: ShowDetails;
+  enlarge?: boolean;
 }>();
 
 const readableGenre = computed(() => props.show.genres.join(" "));
