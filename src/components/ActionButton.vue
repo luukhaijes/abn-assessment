@@ -5,7 +5,7 @@
 </template>
 
 <style>
-button {
+.button {
   @apply rounded
   bg-button-red
   px-6

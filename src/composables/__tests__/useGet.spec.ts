@@ -1,4 +1,4 @@
-import { afterAll, describe, it, vi, expect } from "vitest";
+import { afterAll, describe, vi, expect, test } from "vitest";
 import { useGet } from "../useGet";
 import { flushPromises } from "@vue/test-utils";
 
@@ -26,12 +26,12 @@ describe("UseGet", () => {
     vi.resetAllMocks();
   });
 
-  it("Should start with null", async () => {
+  test("Should start with null", async () => {
     const { data } = useGet("api-url");
     expect(data.value).to.equal(null);
   }, 200);
 
-  it("Should return an error if doesnt suffice", async () => {
+  test("Should return an error if doesnt suffice", async () => {
     const { error } = useGet("wrong-url");
     await flushPromises();
 
@@ -39,7 +39,7 @@ describe("UseGet", () => {
     expect(error.value).to.deep.equal(errorItem);
   }, 200);
 
-  it("Should return data ref with value", async () => {
+  test("Should return data ref with value", async () => {
     const { data } = useGet("api-url");
     await flushPromises();
 

@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { useShowListSorted } from "../useShowListSorted";
 import type { ShowItem } from "../../interfaces/show.interface";
 
@@ -40,12 +40,12 @@ const expected = {
 describe("useGetSorted", () => {
   const { sorted } = useShowListSorted(payload);
 
-  it("Should return popular sorted list based on rating", () => {
+  test("Should return popular sorted list based on rating", () => {
     expect(sorted.Popular).toBeDefined();
     expect(sorted.Popular).to.deep.equal(expected.sorted.Popular);
   });
 
-  it("Should return all genres with popular", () => {
+  test("Should return all genres with popular", () => {
     expect(Object.keys(sorted).length).to.equal(genres.length);
   });
 });
