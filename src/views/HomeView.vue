@@ -12,9 +12,13 @@ import { ref, watch } from "vue";
 import { getRandom } from "@/utils/get-random";
 import HomeViewMovieBillboard from "@/components/HomeViewMovieBillboard.vue";
 import type { ShowItem } from "@/interfaces/show.interface";
+import { usePageTitle } from "@/composables/usePageTitle";
 
 const { data } = useShowList();
 const billboardShow = ref<ShowItem | null>(null);
+
+const { reset } = usePageTitle();
+reset();
 
 watch(data, (value) => {
   if (value?.length) {

@@ -35,8 +35,16 @@ import Billboard from "@/components/MovieBillboard.vue";
 import ShowCast from "@/components/ShowCast.vue";
 import ShowPhotos from "@/components/ShowPhotos.vue";
 import ShowSection from "@/components/ShowSection.vue";
+import { watch } from "vue";
+import { usePageTitle } from "@/composables/usePageTitle";
 
 const { params } = useRoute();
 
 const { data: showDetail } = useGetShow(+params.showId);
+
+watch(showDetail, (value) => {
+  if (value) {
+    usePageTitle(value.name);
+  }
+});
 </script>
