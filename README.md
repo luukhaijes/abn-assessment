@@ -1,19 +1,21 @@
 # abn-assessment
-Framework: Vue 3, as it was stated in the email and ABN works with it
+Framework: Vue 3, as it was stated in the email and ABN AMRO works with it.
 
 ## Requirements
-### UI
-- [x] Show basic genres (eg.: Drama)
-- [x] Show based on rating
 - [x] Eye catching UI
 - [x] Add search
 - [x] Add detail page for show
 - [x] Responsive
-- [ ] move close button for search
+- [x] Unit tests
+- [x] use TVMaze API
+- [x] Show popular list based on rating
+- [x] Horizontal list with genre (made it random, makes it look like an algorithm)
+- [x] Show details
+- [x] Add search
 
-### Technical
-- [ ] Unit tests
-- [ ] check import consistency for components
+I wanted to add some extra information, but I didn't have enough time.
+I created a lambda function on AWS which proxies another api that needed a token.
+Here is the link: https://p7z6exmwk3.execute-api.eu-central-1.amazonaws.com/default/extraShowInfo?t=tt0903747
 
 ## Project Setup
 

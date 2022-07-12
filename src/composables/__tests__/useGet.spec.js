@@ -8,7 +8,7 @@ const showItem = {
 
 const errorItem = { message: "Error" };
 
-const fetchMock = (url: string) => {
+const fetchMock = (url) => {
   return Promise.resolve({
     json: () => {
       if (url === "api-url") {

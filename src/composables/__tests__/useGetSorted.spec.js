@@ -1,6 +1,5 @@
 import { describe, expect, test } from "vitest";
 import { useShowListSorted } from "../useShowListSorted";
-import type { ShowItem } from "../../interfaces/show.interface";
 
 const genres = ["Popular", "Fantasy", "Drama"];
 
@@ -26,7 +25,7 @@ const payload = [
       average: 6
     }
   }
-] as Array<ShowItem>;
+];
 
 const expected = {
   sorted: {

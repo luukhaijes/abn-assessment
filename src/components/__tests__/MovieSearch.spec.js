@@ -4,7 +4,6 @@ import { mount, shallowMount } from "@vue/test-utils";
 import MovieSearch from "@/components/Search/MovieSearch.vue";
 import { createTestAttr } from "../../test-utils/create-test-attr";
 import { MovieSearchTeleport } from "../../tokens/movie-search-teleport";
-import { useShowSearch } from "../../composables/useShowSearch";
 import { nextTick } from "vue";
 import { shows } from "../../test-data/shows";
 

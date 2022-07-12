@@ -24,7 +24,7 @@ describe("StarRating", () => {
       }
     });
 
-    const elements = wrapper.findAll<HTMLElement>(createTestAttr("star"));
+    const elements = wrapper.findAll(createTestAttr("star"));
     const activeColor = wrapper.vm.ACTIVE_FILL_COLOR;
     expect(elements.filter((elm) => elm.element.style.fill === activeColor).length).toBe(3);
   });
