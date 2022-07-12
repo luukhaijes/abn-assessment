@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import type { ShowItem } from "@/interfaces/show.interface";
-import { useShowListSorted } from "@/composables/use-show-list-sorted";
+import { useShowListSorted } from "@/composables/useShowListSorted";
 import ShowListItem from "@/components/ShowListItem.vue";
 import ShowCarrousel from "@/components/ShowCarrousel.vue";
 

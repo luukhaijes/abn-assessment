@@ -22,5 +22,7 @@ const changedSummary = computed(() => {
     const cutLength = props.cutOfLength;
     return cutLength && strippedHTML.length >= cutLength ? strippedHTML.slice(0, cutLength) + "..." : strippedHTML;
   }
+
+  return "";
 });
 </script>

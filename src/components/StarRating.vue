@@ -26,7 +26,7 @@ const stars = (): number[] => {
   }
 };
 
-const divs = ref<Array<ComponentPublicInstance<HTMLElement>> | Array<any>>([]);
+const divs = ref<Array<ComponentPublicInstance<HTMLElement>>>([]);
 
 onMounted(() => {
   stars().forEach((star: number) => {

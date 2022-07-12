@@ -1,13 +1,11 @@
 import type { ShowItem } from "@/interfaces/show.interface";
-import { useGet } from "@/composables/use-get";
-import type { UseGet } from "@/composables/use-get";
+import { useGet } from "@/composables/useGet";
+import type { UseGet } from "@/composables/useGet";
 import { ref, watch } from "vue";
 import type { Ref } from "vue";
 import type { ShowSearchItem } from "@/interfaces/show-search-item.interface";
 
 type UseShowList = UseGet<ShowItem[]>;
-
-// const results = ref<ShowSearchItem[]>([]);
 
 export function useShowSearch(query: Ref<string>): UseShowList {
   const url = "https://api.tvmaze.com/search/shows";
@@ -24,7 +22,6 @@ export function useShowSearch(query: Ref<string>): UseShowList {
     });
 
     watch(data, () => {
-      console.log("d", data);
       if (data.value) {
         results.value = data.value?.map((searchItem: ShowSearchItem) => searchItem.show);
       }

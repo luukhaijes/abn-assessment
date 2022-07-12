@@ -1,6 +1,6 @@
-import type { UseGet } from "@/composables/use-get";
+import type { UseGet } from "@/composables/useGet";
 import type { ShowItem } from "@/interfaces/show.interface";
-import { useGet } from "@/composables/use-get";
+import { useGet } from "@/composables/useGet";
 import type { Embeds } from "@/interfaces/embeds.interface";
 
 export interface ShowDetails extends ShowItem {

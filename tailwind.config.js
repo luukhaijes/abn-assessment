@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'button-red': {
-          DEFAULT: '#d84546',
-          dark: '#d32d2e'
+        "button-red": {
+          DEFAULT: "#d84546",
+          dark: "#d32d2e"
         }
       }
     }

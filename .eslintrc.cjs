@@ -19,10 +19,11 @@ module.exports = {
     "comma-dangle": [2, "never"],
     "max-len": ["error", { code: 120 }],
     "prettier/prettier": [
-      "warn",
+      "error",
       {
         trailingComma: "none",
-        printWidth: 150
+        printWidth: 120,
+        quoteProps: "consistent"
       }
     ],
     "tailwindcss/no-custom-classname": "off",

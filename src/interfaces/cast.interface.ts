@@ -23,7 +23,7 @@ export interface Person {
   name: string;
   country: Country;
   birthday: string;
-  deathday?: any;
+  deathday?: string;
   gender: string;
   image: Image;
   updated: number;

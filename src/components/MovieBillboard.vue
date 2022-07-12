@@ -1,6 +1,6 @@
 <template>
   <div v-if="show" class="flex h-96 w-full overflow-hidden bg-cover bg-center" ref="billBoard">
-    <div class="flex w-full bg-black bg-opacity-10 p-3 pb-6 backdrop-blur md:w-auto md:p-12 min-w-[24rem]">
+    <div class="flex w-full min-w-[24rem] bg-black bg-opacity-10 p-3 pb-6 backdrop-blur md:w-auto md:p-12">
       <div class="mt-auto">
         <h2 class="mb-1 text-4xl font-bold text-white">{{ show.name }}</h2>
         <StarRating class="mb-2" :score="show.rating.average" />
@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 import type { ShowImage } from "@/interfaces/show-images.interface";
-import type { ShowDetails } from "@/composables/use-get-show";
+import type { ShowDetails } from "@/composables/useGetShow";
 import StarRating from "@/components/StarRating.vue";
 import { getRandom } from "@/utils/get-random";
 
@@ -58,6 +58,5 @@ watch(billBoard, () => {
 </script>
 <style>
 p {
-
 }
 </style>

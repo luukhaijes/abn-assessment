@@ -2,8 +2,11 @@
   <template v-if="cast?.length">
     <div class="flex flex-row flex-wrap justify-around md:flex-nowrap md:justify-between">
       <div v-for="cast in mainCast" class="w-32 text-center" :key="cast.person.id">
-        <img :src="cast.person.image.medium" :alt="'Cast picture of ' + cast.person.name"
-             class="mb-2 aspect-square w-full rounded-full object-cover" />
+        <img
+          :src="cast.person.image.medium"
+          :alt="'Cast picture of ' + cast.person.name"
+          class="mb-2 aspect-square w-full rounded-full object-cover"
+        />
         <p class="text-sm font-bold">{{ cast.person.name }}</p>
       </div>
     </div>
@@ -11,7 +14,6 @@
 </template>
 
 <script setup lang="ts">
-import SectionTitle from "@/components/SectionTitle.vue";
 import type { CastItem } from "@/interfaces/cast.interface";
 import { computed } from "vue";
 

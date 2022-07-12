@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { useShowList } from "@/composables/use-show-list";
+import { useShowList } from "@/composables/useShowList";
 import ShowList from "@/components/ShowList.vue";
 import { ref, watch } from "vue";
 import { getRandom } from "@/utils/get-random";

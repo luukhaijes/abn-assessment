@@ -14,7 +14,10 @@ function getPopularShows(shows: Array<ShowItem>, limit = 20): Array<ShowItem> {
   return shows.sort((a, b) => b.rating.average - a.rating.average).slice(0, limit);
 }
 
-export function useShowListSorted(showsRef: Array<ShowItem>): { sorted: ChunkedShows; genres: Array<string> } {
+export function useShowListSorted(showsRef: Array<ShowItem>): {
+  sorted: ChunkedShows;
+  genres: Array<string>;
+} {
   const shows = unref(showsRef);
   if (!shows) {
     return {
@@ -35,7 +38,7 @@ export function useShowListSorted(showsRef: Array<ShowItem>): { sorted: ChunkedS
   genres = [GenreEnum.popular, ...genres];
 
   return {
-    sorted,
-    genres
+    genres,
+    sorted
   };
 }

@@ -1,9 +1,9 @@
-import { ref } from "vue";
+import { ref, unref } from "vue";
 import type { Ref } from "vue";
 
 export interface UseGet<T> {
   data: Ref<T | null>;
-  error?: Ref<ShowListError | null>;
+  error: Ref<ShowListError | null>;
   loading?: Ref<boolean>;
   reload?: (url: string) => void;
 }
@@ -32,7 +32,7 @@ export function useGet<T>(url?: string): UseGet<T> {
   };
 
   if (url) {
-    reload(url);
+    reload(unref(url));
   }
 
   return {

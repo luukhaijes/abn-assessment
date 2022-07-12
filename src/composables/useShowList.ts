@@ -1,6 +1,6 @@
 import type { ShowItem } from "@/interfaces/show.interface";
-import { useGet } from "@/composables/use-get";
-import type { UseGet } from "@/composables/use-get";
+import { useGet } from "@/composables/useGet";
+import type { UseGet } from "@/composables/useGet";
 
 type UseShowList = UseGet<ShowItem[]>;
 
