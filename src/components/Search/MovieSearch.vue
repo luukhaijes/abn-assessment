@@ -1,6 +1,6 @@
 <template>
   <Teleport to="body">
-    <div class="fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-30">
+    <div class="modal fixed inset-0 z-10 overflow-y-auto bg-black bg-opacity-30">
       <div
         class="ml-auto mt-3 mr-3 mb-8 block h-10 w-10 cursor-pointer rounded-full bg-white p-2"
         @click="handleCloseClick()"

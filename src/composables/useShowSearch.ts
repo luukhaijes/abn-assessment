@@ -27,7 +27,7 @@ export function useShowSearch(query: Ref<string>): UseShowList {
         results.value = data.value?.map((searchItem: ShowSearchItem) => searchItem.show);
       }
       if (error.value) {
-        searchError.value = error.value
+        searchError.value = error.value;
       }
     });
   }
