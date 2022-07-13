@@ -30,4 +30,17 @@ describe("MovieSearchTeleport", () => {
     await wrapper.find(createTestAttr("teleport-container")).trigger("keyup.capture.esc");
     expect(wrapper.emitted()).toHaveProperty("closeClick");
   });
+
+  test("container must have a tabindex", async () => {
+    const wrapper = mount(MovieSearchTeleport, {
+      global: {
+        stubs: {
+          teleport: true
+        }
+      }
+    });
+
+    const attributeValue = wrapper.get(createTestAttr("teleport-container")).element.getAttribute("tabindex");
+    expect(attributeValue).not.null;
+  });
 });
