@@ -1,5 +1,5 @@
-import { describe, test, expect, vi } from "vitest";
-import { mount, shallowMount } from "@vue/test-utils";
+import { describe, test, expect } from "vitest";
+import { shallowMount } from "@vue/test-utils";
 
 import MovieSearch from "@/components/Search/MovieSearch.vue";
 import { MovieSearchTeleport } from "../../tokens/movie-search-teleport";
@@ -14,7 +14,7 @@ describe("MovieSearch", () => {
     const wrapper = shallowMount(MovieSearch, {
       global: {
         provide: {
-          [MovieSearchTeleport]: () => {}
+          [MovieSearchTeleport]: () => null
         }
       }
     });
@@ -26,7 +26,7 @@ describe("MovieSearch", () => {
     const wrapper = shallowMount(MovieSearch, {
       global: {
         provide: {
-          [MovieSearchTeleport]: () => {}
+          [MovieSearchTeleport]: () => null
         }
       }
     });

@@ -3,9 +3,7 @@
     <div class="item">
       <div class="item__inner custom-bg-100-100" v-lazy-image="show.image.medium">
         <div class="item__content">
-          <ActionButton class="z-20 self-center">
-            View more
-          </ActionButton>
+          <ActionButton class="z-20 self-center"> View more </ActionButton>
         </div>
       </div>
     </div>
