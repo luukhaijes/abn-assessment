@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 h-16 bg-white">
-    <div class="flex h-full border-b px-6 md:px-12">
+    <div class="flex h-full border-b px-6 md:px-16">
       <!--    Controls-->
       <div class="absolute cursor-pointer self-center">
         <IconSearch @click="handleSearchClick()" class="w-8" />
