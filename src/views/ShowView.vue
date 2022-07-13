@@ -1,5 +1,12 @@
 <template>
-  <div v-if="showDetail">
+  <div class="relative" v-if="showDetail">
+    <div class="absolute left-4 top-4 z-30 md:hidden">
+      <div class="h-12 w-12 rounded-full bg-white p-2">
+        <router-link to="/">
+          <IconAngleLeft />
+        </router-link>
+      </div>
+    </div>
     <Billboard class="" :show="showDetail" />
     <div v-if="showDetail" class="mt-12 flex flex-col px-3 md:flex-row md:px-16">
       <div class="mr-16 hidden w-1/6 self-start rounded-md lg:inline-block">
@@ -21,7 +28,12 @@
         </ShowSection>
       </div>
       <div class="w-full md:w-2/6">
-        <ShowPhotos :images="showDetail._embedded.images" />
+        <ShowSection>
+          Photos
+          <template #content>
+            <ShowPhotos :images="showDetail._embedded.images" />
+          </template>
+        </ShowSection>
       </div>
     </div>
   </div>
@@ -37,6 +49,7 @@ import ShowPhotos from "@/components/ShowPhotos.vue";
 import ShowSection from "@/components/ShowSection.vue";
 import { watch } from "vue";
 import { usePageTitle } from "@/composables/usePageTitle";
+import IconAngleLeft from "@/components/icons/IconAngleLeft.vue";
 
 const { params } = useRoute();
 

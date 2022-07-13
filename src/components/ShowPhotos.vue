@@ -1,5 +1,4 @@
 <template>
-  <SectionTitle> Photos </SectionTitle>
   <div class="flex flex-nowrap overflow-x-auto py-3">
     <template v-for="image in images" :key="image.id">
       <template v-if="!image.main">
@@ -14,7 +13,6 @@
 
 <script lang="ts" setup>
 import type { ShowImage } from "@/interfaces/show-images.interface";
-import SectionTitle from "@/components/SectionTitle.vue";
 
 defineProps<{
   images: Array<ShowImage>;
