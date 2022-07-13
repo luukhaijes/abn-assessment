@@ -1,8 +1,8 @@
 <template>
-  <SectionTitle class="px-3 md:px-12">
+  <SectionTitle class="px-3 md:px-16">
     {{ genre }}
   </SectionTitle>
-  <div class="w-100 -mb-4 flex flex-row overflow-x-auto py-4 pb-8 md:px-8">
+  <div class="w-100 -mb-4 flex flex-row overflow-x-auto py-4 pb-8 md:px-12">
     <slot />
   </div>
 </template>

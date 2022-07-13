@@ -1,19 +1,16 @@
 <template>
   <div class="w-100 h-16 bg-white">
-    <div class="flex h-full justify-between border-b px-3 md:px-12">
+    <div class="flex h-full border-b px-6 md:px-12">
       <!--    Controls-->
       <div class="cursor-pointer self-center">
         <IconSearch @click="handleSearchClick()" class="w-8" />
       </div>
       <!--    logo-->
-      <div class="self-center">
+      <div class="mx-auto self-center">
         <router-link to="/">
-          <img class="w-32 cursor-pointer" src="@/assets/abn-max-b.png" />
+          <img class="w-32 cursor-pointer" src="@/assets/abn-max-b.png" alt="ABN Max logo" />
         </router-link>
       </div>
-
-      <!-- account -->
-      <div></div>
     </div>
   </div>
 </template>

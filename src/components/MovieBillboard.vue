@@ -5,7 +5,7 @@
     :class="{ 'h-96': !enlarge, 'h-[550px]': enlarge }"
     ref="billBoard"
   >
-    <div class="flex w-full min-w-[24rem] bg-black bg-opacity-10 p-3 pb-6 backdrop-blur md:w-auto md:p-12">
+    <div class="flex w-full min-w-[24rem] bg-black bg-opacity-10 p-3 pb-6 backdrop-blur md:w-auto md:p-12 md:px-16">
       <div class="mt-auto">
         <h2 class="mb-1 text-4xl font-bold text-white">{{ show.name }}</h2>
         <StarRating class="mb-2" :score="show.rating.average" />
