@@ -1,6 +1,6 @@
 <template>
   <div class="relative" v-if="showDetail">
-    <div class="absolute left-4 top-4 z-30 md:hidden">
+    <div class="absolute left-4 top-4 z-30">
       <div class="h-12 w-12 rounded-full bg-white p-2">
         <router-link to="/">
           <IconAngleLeft />
