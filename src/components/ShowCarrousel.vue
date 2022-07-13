@@ -14,5 +14,3 @@ defineProps<{
   genre: string;
 }>();
 </script>
-
-<style></style>

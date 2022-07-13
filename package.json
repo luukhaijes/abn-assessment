@@ -11,14 +11,11 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintignore --ignore-pattern /src/components/icons/*.vue"
   },
   "dependencies": {
-    "@iconify/json": "^2.1.75",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
-    "jest": "^28.1.2",
     "@rushstack/eslint-patch": "^1.1.0",
-    "@testing-library/vue": "^6.6.0",
     "@types/jsdom": "^16.2.14",
     "@types/node": "^16.11.41",
     "@vitejs/plugin-vue": "^2.3.3",
@@ -30,6 +27,7 @@
     "eslint": "^8.5.0",
     "eslint-plugin-tailwindcss": "^3.6.0",
     "eslint-plugin-vue": "^9.0.0",
+    "jest": "^28.1.2",
     "jsdom": "^20.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
