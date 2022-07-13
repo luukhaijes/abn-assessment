@@ -1,3 +1,5 @@
+![Vercel](https://vercelbadge.vercel.app/api/luukhaijes/abn-assessment)
+![Test and lint](https://github.com/luukhaijes/abn-assessment/actions/workflows/test.yaml/badge.svg)
 # abn-assessment
 Framework: Vue 3, as it was stated in the email and ABN AMRO works with it. 
 I also used TypeScript as I find it nice to document the large nested object TVMaze sends back.
