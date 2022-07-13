@@ -5,7 +5,7 @@ import type { ShowListError, UseGet } from "@/composables/useGet";
 import { useGet } from "@/composables/useGet";
 import type { ShowSearchItem } from "@/interfaces/show-search-item.interface";
 
-type UseShowList = UseGet<ShowItem[]>;
+type UseShowList = UseGet<Array<ShowItem>>;
 
 export function useShowSearch(query: Ref<string>): UseShowList {
   const url = "https://api.tvmaze.com/search/shows";

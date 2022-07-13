@@ -1,4 +1,6 @@
-export const shows = [
+import type { ShowItem } from "@/interfaces/show.interface";
+
+export const shows: Array<ShowItem> = [
   {
     id: 1,
     url: "https://www.tvmaze.com/shows/1/under-the-dome",

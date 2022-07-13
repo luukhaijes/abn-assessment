@@ -17,7 +17,7 @@ export interface Network {
   id: number;
   name: string;
   country: Country;
-  officialSite: string;
+  officialSite: string | null;
 }
 
 export interface Externals {
@@ -55,14 +55,14 @@ export interface ShowItem {
   runtime: number;
   averageRuntime: number;
   premiered: string;
-  ended: string;
-  officialSite: string;
+  ended: string | null;
+  officialSite: string | null;
   schedule: Schedule;
   rating: Rating;
   weight: number;
   network: Network;
-  webChannel?: string;
-  dvdCountry?: string;
+  webChannel?: string | null;
+  dvdCountry?: string | null;
   externals: Externals;
   image: Image;
   summary: string;
